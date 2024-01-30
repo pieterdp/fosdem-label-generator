@@ -2,7 +2,7 @@ import labels
 from reportlab.graphics import shapes
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase.pdfmetrics import registerFont, stringWidth
-from os.path import join, makedirs, exists
+from os.path import join, exists
 
 
 class LabelsPerPage24:
@@ -87,7 +87,7 @@ class LabelsPerPage24:
             return '{0}_{1}-{2}_24.pdf'.format(
             box,
             first_item,
-            current_item
+            current_item - 1
         )
         
         return self._generic_label_generator(
@@ -104,7 +104,7 @@ class LabelsPerPage24:
         """
         def draw_label(label, width, height, data):
             label.add(shapes.String(0, 20, data['building'].upper(), fontName='Source Code Pro', fontSize=100))
-            label.add(shapes.Image(70, 40, 50, 50, path='gear_w_bg.png'))
+            label.add(shapes.Image(70, 40, 50, 50, path='img/gear_w_bg.png'))
             label.add(shapes.String(70, 10, data['id'], fontName='Source Code Pro', fontSize=30))
             label.add(shapes.Image(117, 35, 60, 60, path=data['qr_path']))
         
@@ -126,7 +126,7 @@ class LabelsPerPage24:
             return '{0}_{1}-{2}_24.pdf'.format(
             building,
             first_item,
-            current_item
+            current_item - 1
         )
         
         return self._generic_label_generator(

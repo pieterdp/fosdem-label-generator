@@ -10,7 +10,7 @@ class QRCodeGenerator:
     """
     inventory_base_url = 'https://inventory.fosdem.org/link'
 
-    def generate_for_item(self, item, qr_loc, destination=None, storage=None, box=None):
+    def generate_for_item(self, item, qr_loc='out/qr-codes', destination=None, storage=None, box=None):
         """
         Generate a QR code for a FOSDEM item
         """
