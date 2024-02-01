@@ -146,7 +146,7 @@ class LabelsPerPage48:
         def label_cb(label, width, height, data):
             label.add(shapes.String(0, 35, data['room'].upper(), fontName='Source Code Pro', fontSize=22))
             label.add(shapes.String(-2, 5, data['id'], fontName='Source Code Pro', fontSize=18))
-            label.add(shapes.Image(95, 0, 35, 35, path=data['qr_path']))
+            label.add(shapes.Image(92, 0, 35, 35, path=data['qr_path']))
             label.add(shapes.Image(70, 0, 25, 25, path='img/gear_w_bg.png'))
 
         sheet = labels.Sheet(self.sheet_specs, label_cb, border=False)
