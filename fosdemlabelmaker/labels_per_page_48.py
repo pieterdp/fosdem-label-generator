@@ -71,7 +71,8 @@ class LabelsPerPage48:
         Returns the first unused label (so don't increment or you'll have a gap).
         """
         def draw_label(label, width, height, data):
-            label.add(shapes.Image(-2, 35, 25, 25, path='img/gear_w_bg.png'))
+            #label.add(shapes.Image(-2, 35, 25, 25, path='img/gear_w_bg.png'))
+            label.add(shapes.Image(-2, 35, 25, 25, path='img/fosdem_logo_gerry.png'))
             label.add(shapes.String(30, 50, 'Property of', fontName='Source Sans Pro', fontSize=8))
             label.add(shapes.String(30, 40, 'FOSDEM', fontName='Source Sans Pro', fontSize=8))
             label.add(shapes.String(-2, 5, data['id'], fontName='Source Code Pro', fontSize=20))

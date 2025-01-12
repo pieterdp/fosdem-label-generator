@@ -18,6 +18,10 @@ PDF to the correct dimensions.
 
 ## Usage
 
+* Generates pages of labels.
+* Generates the QR-codes automatically (`{}`).
+* Output is in `out/labels` (PDF with labels) and `out/qr-codes` (QR codes).
+
 ### Generic options
 
 | Option | Usage |
